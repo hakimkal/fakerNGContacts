@@ -1,0 +1,35 @@
+<head>
+  <title>Consuming FakerNG Service</title>
+</head>
+
+<body>
+  <h1>Welcome to Meteor!</h1>
+{{>myFirstMeteorTemplate}}
+
+</body>
+<template name="myFirstMeteorTemplate">
+<p>Hello Abuja developers </p>
+
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Panel heading</div>
+  <div class="panel-body">
+    <p>...</p>
+  </div>
+
+  <!-- Table -->
+<table class="table"> <thead> <tr> <th>#</th> <th>First Name</th> <th>Last Name</th> <th>Email</th><th>Address</th> </tr> </thead>
+
+   <tbody>
+{{#each p in fakePeople }}
+      <tr> <th scope="row">{{incHelper @index}}</th> <td>{{p.firstName}}</td> <td>{{p.surname}}</td> <td>{{p.email}}</td>
+<td>{{p.address}}</td>
+       </tr>
+
+{{/each}}
+
+   </tbody>
+
+     </table>
+</div>
+</template>
